@@ -1,0 +1,74 @@
+::-webkit-scrollbar {
+  width: 7px;
+  background:black; 
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#dc3545; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:#ffffff; 
+}
+
+body{
+  height: 100vh;
+  background-image: url('cover.jpg');
+  background-color: black;
+  backdrop-filter: blur(5px);
+  background-attachment: fixed;
+  position: relative;
+}
+
+.music-card img{
+  height: 300px !important;
+  width: auto !important;
+}
+
+.content .overview{
+  max-width:max-content !important;
+}
+
+.search{
+  position: fixed;
+  top: 50% !important;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+#search{
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0 0 7px 5px rgba(255, 255, 255, 0.5);
+}
+
+#search option:hover{
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+main{
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.music-card{
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 7px 1px rgba(255, 255, 255, 0.3);
+}
+
+.music-card:hover{
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+  background-color: black;
+  box-shadow: 2px 3px 7px 1px rgba(255, 255, 255, 0.5 );
+}

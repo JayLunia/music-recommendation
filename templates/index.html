@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% if title %}
+{{title}}
+
+{% else %}
+index
+{% endif %}
+
+{% endblock title %}
+
+
+{% block body %}
+
+<main class="container-fluid">
+    <div class="bg-danger text-center text-white p-3 fs-3 fs-md-1">
+        {{title}} 
+        <div class="badge bg-success ms-auto fs-5 fw-normal">total Musics {{s|length}}</div> 
+    </div>
+  <div class="search">
+
+      <select class="form-select form-select-lg" id="search" >
+          <option value="-1">--select a music--</option>
+          {% for music in  s %}
+          
+          <option value="{{music[1]}}">{{music[1]}}</option>
+          {% endfor %}
+          
+        </select>
+        
+        <button class="btn btn-lg btn-danger mt-3" id="recommend">recommend</button>
+        
+    </div>  
+
+</main>
+
+
+   
+
+{% endblock body %}
